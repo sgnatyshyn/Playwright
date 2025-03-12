@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Button</title>
+</head>
+<body>
+    <button id="btn">Live button!</button>
+    <div id="messages" style="padding-top: 20px;"></div>
+
+    <script>
+        let button = document.getElementById("btn");
+        let messages = document.getElementById("messages");
+
+        function addMessage(text) {
+            let someText = document.createElement("div");
+            someText.innerHTML = text;
+            messages.appendChild(someText);
+        }
+
+        button.onmouseover = function() {
+            addMessage("Mouse on me!");
+        }
+
+        button.onclick = function() {
+            addMessage("I was pressed!");
+        }
+
+        button.onmouseout = function() {
+            addMessage("Mouse is not on me!");
+        }
+    </script>
+</body>
+</html>

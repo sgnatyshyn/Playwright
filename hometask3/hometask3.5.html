@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Box</title>
+</head>
+<body>
+    <div id="messages"></div>
+    
+    <textarea id="write" placeholder="Write message...."></textarea>
+    <button id="btn">Send</button>
+    
+    <script>
+        let button = document.getElementById("btn");
+        let messageBox = document.getElementById("messages");
+
+        function addMessage() {
+            let text = document.getElementById("write").value;
+            
+            let message = document.createElement("div");
+            message.innerHTML = text + "<br><small>" + new Date().toLocaleString() + "</small>" + "<hr>";
+            message.style.padding = "5px";
+            message.style.marginTop = "5px";
+            
+            messageBox.prepend(message); 
+            document.getElementById("write").value = "";
+        }
+
+        button.onclick = addMessage;
+    </script>
+</body>
+</html>

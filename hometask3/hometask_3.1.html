@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <fieldset>
+        <legend align ="center"> Новий користувач </legend>
+        <input value="Name" type="text" data-form="ПІБ" class="text-data arr" name="fio" placeholder="Введіть ПІБ">
+        <input value="+380-00-000-0000" type="phone" data-form="Номер телефону" class="arr" name="phone" placeholder="+380-00-000-0000">
+        <input value="2020-02-02" type="date" data-form="Дата народження" class="arr" name="birthday">
+        <input value="softserve@softserve.com" type="email" data-form="Електронна пошта" class="arr" placeholder="email@softserveinc.com"
+            name="email">
+        <input type="submit" class="btn">
+
+        <script>
+            const name1 = document.querySelector(".text-data.arr");
+            const name = name1.value;
+            const phoneNumber1 = document.querySelector('input[name="phone"]');
+            const phoneNumber = phoneNumber1.value;
+            const dateOfBirth1 = document.querySelector('input[name="birthday"]');
+            const dateOfBirth = dateOfBirth1.value;
+            const emailAddress1 = document.querySelector('input[name="email"]');
+            const emailAddress = emailAddress1.value;
+            console.log("Name: " + name);
+            console.log("PhoneNumber: " + phoneNumber);
+            console.log("DateOfBirth: " + dateOfBirth);
+            console.log("EmailAddress: " + emailAddress);
+        </script>
+
+    </fieldset>
+</body>
+</html>

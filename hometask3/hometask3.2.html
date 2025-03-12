@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>    
+    <section>
+        <h2 class="header">Header</h2>
+        <p id="data">DOM - document object model </p>
+        <span>Span</span>
+        <div>Invisible element</div>
+    </section>
+    <button id="btn">Add style</button>
+    <script>
+        document.getElementById("btn").onclick = function() {
+            let header = document.querySelector(".header");
+            header.style.color = "red"; 
+            header.style.textDecoration = "underline"; 
+            
+            let dom = document.getElementById("data");
+            dom.style.color = "brown"; 
+            dom.style.fontSize = "18px"; 
+            dom.style.fontFamily = "Comic Sans MS";
+            
+            let span = document.querySelector("span");
+            span.style.color = "green"; 
+            span.style.fontStyle = "italic"; 
+            
+            let invisible = document.querySelector("div");
+            invisible.style.display = "none"; 
+        }
+    </script>
+</body>
+</html>
