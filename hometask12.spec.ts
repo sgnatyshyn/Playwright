@@ -132,7 +132,7 @@ test('test5', async ({ page }) => {
     const product = page.locator('a', {hasText:"HTC Touch HD"});
     await product.click();
     
-    //await expect (page.locator('h3[data-update="price"]')).toHaveText('$146.00'); не
+    //await expect (page.locator('h3[data-update="price"]')).toHaveText('$146.00'); не працює
    
 });
 
